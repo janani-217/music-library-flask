@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" style=" background-image: url('https://img.freepik.com/free-photo/cartoon-style-musical-notes-background_23-2151056773.jpg?t=st=1714612435~exp=1714616035~hmac=32429166baa37df4117a83eef3caad9d4e4bf508f0c7b6144fbcf0402d215553&w=900');">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Result</title>
+</head>
+<body>
+    <h1>Delete Result</h1>
+    {% if song %}
+        <p>✅ Song deleted successfully.</p>
+    {% else %}
+        <p>🚫 Sorry, couldn't find that song to delete.</p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" style=" background-image: url('https://img.freepik.com/free-photo/cartoon-style-musical-notes-background_23-2151056773.jpg?t=st=1714612435~exp=1714616035~hmac=32429166baa37df4117a83eef3caad9d4e4bf508f0c7b6144fbcf0402d215553&w=900');">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groovy Tunes Music Library</title>
+</head>
+<center>
+    <h1>Welcome to the Groovy Tunes Music Library!</h1>
+    <h2>All Songs</h2>
+    <ul action="http://localhost:5000/">
+        {% for song in songs %}
+        <li>🎵 Song     : {{song._id}} 
+                Title   : {{ song.title }}, 
+                Artist  : {{ song.artist }}, 
+                Album   : {{ song.album }}, 
+                Duration: {{ song.duration }} 🎵</li>
+        {% endfor %}
+    </ul>
+</center>
+<center>
+    <h2>Search Song by ID</h2>
+    <form action="http://localhost:5000/search_by_id" method="GET">
+        <input type="text" name="song_id" placeholder="Enter song ID">
+        <button type="submit">Search</button>
+    </form>
+</center>
+<center>
+    <h2>Delete Song by ID</h2>
+    <form action="http://localhost:5000/delete_by_id" method="POST">
+        <input type="text" name="song_id" placeholder="Enter song ID">
+        <button type="submit">Delete</button>
+    </form>
+
+    <h2>Insert New Song</h2>
+    <form action="http://localhost:5000/add_song" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="artist">Artist:</label><br>
+        <input type="text" id="artist" name="artist" required><br>
+
+        <label for="album">Album:</label><br>
+        <input type="text" id="album" name="album" required><br>
+
+        <label for="duration">Duration:</label><br>
+        <input type="text" id="duration" name="duration" required><br>
+
+        <button type="submit">Add Song</button>
+    </form>
+
+    <h1>Update Song</h1>
+    <form action="http://localhost:5000/update_song" method="post">
+        <label for="artist">Artist (to find the song):</label><br>
+        <input type="text" id="artist" name="artist"><br><br>
+        
+        <label for="title">New Song Title:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+        
+        <label for="album">New Album Title:</label><br>
+        <input type="text" id="album" name="album"><br><br>
+        
+        <label for="duration">New Duration (in seconds):</label><br>
+        <input type="text" id="duration" name="duration"><br><br>
+        
+        <input type="submit" value="Update Song">
+    </form>
+</center>
+
+</body>
+</html>

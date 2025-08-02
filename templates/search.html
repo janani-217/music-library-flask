@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"  style=" background-image: url('https://img.freepik.com/free-photo/cartoon-style-musical-notes-background_23-2151056773.jpg?t=st=1714612435~exp=1714616035~hmac=32429166baa37df4117a83eef3caad9d4e4bf508f0c7b6144fbcf0402d215553&w=900');">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+<body>
+    <h1>Search Result</h1>
+    {% if song %}
+        <p>🎉 Song found - Title: {{ song.title }},
+             Artist: {{ song.artist }}, 
+             Album: {{ song.album }},
+             Duration: {{ song.duration }} 🎉</p>
+    {% else %}
+        <p>🚫 Sorry, couldn't find that song.</p>
+    {% endif %}
+</body>
+</html>
