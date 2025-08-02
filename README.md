@@ -27,7 +27,10 @@ A simple web application to manage your own music library using **Flask** and **
 
 > Add screenshots here later for UI
 
----
+---## 🖼️ UI Preview
+
+![Homepage](screenshot/homepage.png)
+
 
 ## 📁 Project Structure
 
